@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Karhoo Demo</string>
+
+    <string name="retry">Retry</string>
+    <string name="list_empty_result">No data</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="address_autocomplete_title">Addresses</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pick_up">Pick up</string>
+    <string name="drop_off">Drop off</string>
+    <string name="plan_a_trip">Plan a Trip</string>
+</resources>

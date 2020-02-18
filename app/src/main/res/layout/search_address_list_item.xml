@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.graphics.drawable.Drawable"/>
+        <import type="com.example.karhoodemo.domain.model.Address"/>
+
+        <variable
+                name="address"
+                type="Address"/>
+    </data>
+    <androidx.cardview.widget.CardView
+            style="@style/CardView.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            app:contentPadding="@dimen/card_padding"
+            app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:text="@{address.displayAddress}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:minLines="2"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/overview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/default_margin"
+                    tools:text="Address"
+            />
+
+            <TextView
+                    android:id="@+id/overview"
+                    android:text="@{address.placeId}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title"
+                    app:layout_constraintStart_toStartOf="@+id/title"
+                    tools:text="Place ID"
+            />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
